@@ -1,58 +1,425 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <title>Hello! It's me!</title>
-<style>
-body{
-     text-align: center;
-}
-p{
-     font-size:25; 
-     background-color: black; 
-     color:white;
-}
-p1{
-     color:gold;
-}
-p2{
-     font-size:15;
-     color:cyan;
-}
-p3{
-     font-size:25; 
-     color:magenta;
-     font-weight: bold;
-}
-p4{
-     font-size:15; 
-     color:OrangeRed;
-}
-p5{
-     font-size:25;
-     color:FF0002;
-     font-weight: bold;
-}
-</style>
- </head>
- 
-<h1> <i><p1>Myself ^_^</p1></i></h1>
-<body background="background6.jpg" font face="Chiller">
- <img src="Abb.jpg" alt="text" width="200" height="250">
-<p>&quot We all make choices in life, but in the end our choices make us. &quot</p>
-<p2> Name &#8594 Rihab Adib bin Othman</p>
-<p2> Birthday &#8594 11 Jan 1997</p>
-<p2> Favourite color &#8594 Purple, blue</p>
-<p2> Hometown &#8594 Banting, Selangor</p>
-<p2> Skills &#8594 It's complicated</p>
-<p3> Likes &#60;3<br>
- <p4>&#126;Writing</p>
- <p4>&#126;Atmospheric music</p>  
- <p4>&#126;Video Games! </p> 
- <p4>&#126;Family time </p> 
- <p4>&#126;Desserts</p></p>
-<p5> Dislikes &#60;&#47;3<br>
-<p4> &#126;Noisy surroundings</p>
-<p4> &#126;Not understand subject</p>
-<p4>  &#126;cockroaches</p>
- 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Welcome to my Resume</title>
+  <link rel="stylesheet" href="Resume.css">
+</head>
+<body>
+	<div class="whole">
+		<div class="part1">
+			<div id="gambar">
+				<img id="acah" src="gambo1.jpg">
+			</div>
+			
+			<div id="biodata">
+				<table id="GBA">
+					<tr id="A">
+						<td>
+							<b>ADDRESS</b>
+							<br>No.2, Jalan Tilapia 1, Taman Sri Putra, Banting, Selangor
+						</td>
+					</tr>
+					
+					<tr id="D">
+						<td>
+							<b>CONTACT ME</b>
+							<br>011-21800034
+							<br>oarfla@gmail.com
+						</td>
+					</tr>
+					
+					<tr id="D">
+						<td>
+							<b>DATE OF BIRTH</b>
+							<br>11.1.1997
+						</td>
+					</tr>
+				</table>
+	
+	
+			</div>
+			<div id="specialize">
+				<table id="tableicons">
+					<tr >
+						<td id="icongambar">
+							<img id="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX///8AAACtra2Wlpa0tLSOjo4eHh7V1dU+Pj709PRLS0vi4uLu7u7BwcH5+fl+fn5gYGBWVlYwMDCioqJtbW3o6OhbW1vU1NTKyso6Ojrb29tmZma9vb3Ozs6ZmZmysrIMDAxzc3N7e3spKSkXFxdISEiIiIgzMzMbGxskJCQRERGJPZ3TAAAMXklEQVR4nO2d53riOhCGMWWDqUmAQGjBIf3+L/CArVGzukaU8/j7tWGNrJexpNFoZLVajRo1atSoUYjWs/lvdg86FrNhAF/7+9oV91K/68nXvXaNAzT24Ju8XLu2Qdo4Ay6uXdVQ/Y3+54AnOSFOrl3LGP1zIXyil3/0dgs3s19Vi93XgdbZoS2yXtS3/72m2rTW9h4VruxPLlAxPOUwfH/YroQf4/US1UIV+F9by3XwU9yXBc8akZp/mi8bksvektcHvw+bkbqbRwxy1Q/67WVNswKd0amHLKqLOtg3l1U+UnNkxq+q8lPjRc/VRTvcW9c1dR69PDR2aYhOj3K8oFcYoJZKOpGj8SJyZ9QbK0RMmK1RS82rQs2e22UIwYQvuMXeEGEaE94QIZjwCbnc2yFMZMKLEOZf7hURW+EYwYu6AGH+mxX2q1QmXGFM1tIT5mf3fm67StUKV+cPohGTE+bV/MXmpyhMuKo+iUVMTZjDBM2MqDDhlnxkndrZapCWkAJmx9x0ncKEPfhmpBXTEk4o4LNx8qwcCxlilBWTEub/KKD5QvVYiGPFlIQTBmgOf+jcGRQrJiRkbdBiQb07g2HFdIQM8NsSwDJMKjrxiMkIc8dOpmX2SOOtmIrQ3YKWSUW0FRMReljQNqmI7W7SEHpY0D61j3xQkxC6DvSl7PPCOCumIHQe6M9ymdpHWTEBofNAX8ppah9jRXxCztl2v78twBZhRXRCn1605R6dCUfEJvQEdA+wBSMiE3oC+gTYQhFxCX0BvWKkgd0NKqEvoGeMNMyKmIRsoD+6AfqGuYOsiEn46WlB/zA3Q3RPrEQkhNX+7NURMGClgiK6hNErIRKu4O4zx3sHrFSAg+ASRRe/gkFI7561nW4dsF44OvjdgqsWSjuc+SH6m3BEb9B3/g7uaOGF6N8KGaBPbhbuiO+D6G3CIAuie23uiN6tMBAQ3fN2RvQ1IetkPNMH0WdPjoi+rTDUgilmwG6IniYMtmCSKIYLouPUHhRuwTSRKAdEPxNGWDBRNNGK6NcKYyyYKiJsQ/QyYZQFk0X1zYheJoyzYLqVGSOijwljAdOtrhkQfUwY+Yi2Uq6Q6hE9TBhtwaSr3DpEDxOO/mItmDZTgSEKCXjuJkSwYOJsEyWi+6QCw4KpM4ZUiM4mRLFg8qyvelt0boWqXvTrfXpSQTYN9Kq/SGBxX/1V++FSZ+4xRFItZxPSXcecBQk0YSK7sZbVX4Pqr5VcTvLsS0B8qP70mNo/1R/RfwJhXyj56VqEBBFM5uPODMRHtHWrhCUiAPlNKp7kTuZGCU+I1GLvHiY8afAt/n2rhC1uw1T74NgKK0krIJlASDaciT1Nbcfv5fdbtP/C91SMS21JuvFK+GtX/VXbfnaNHSVta+Y+pm5nz0wqNYSlGsKbVkNYqiG8aTWEpRrCm1ZDWOquCScehJ27VM+D8K7VEN6/GsL7V0NYqn2XmnkQGq+5WfmM+BeqErL+/15bQ1iqIbxpNYSlGsKbVkNYihDe3xtozxp5EIYcNXB9LavKm18NQBaQI19JdSWRtzybF9ZJishFl27RRDKPzC/QhReLGV/XdaOC8wBqORqCYHfE+4VqhamN20DwSC7zOQ7jNtR1NA7pj2h2zt2I7ty15rfQbdr3dHAAlxlp7yTpPu3sKfk7r9G0onZx6SNZnmiWFfu37q3rrVNwNXbqPzbZ/arnZvP7PCnoLEdAljl5b3Lfus/emXpPOnrlQU6m9hJvTB8eFiyVz+7p4LWq6/Ce9OWrWc9LHTL5yjZ+3yOiz01xLuuj+nd/f/o3eR3Ou3AzYoF5p/0AidHp57VQxcCvwzh1PhSCvr3lPFcled5r1dXnqQQd8FMjQq18WwSIHhe2b3H9QFfOZCd6pISv7OK0iDD1Cj+lhrrPBd/I2u2DgfBx98lfnBQRhtGIGIhAVpOSUFZCRJhjRx2G9WEiXAqXaggTIkI/ETUlWWqqXUrcf6AdslMhrkn5kedyfHFVXe2Fmkslr4X/PCyYO50IcYBUPDvpb8y/1Ow0hshxasG3HLEaJEKEbjA2EMmevXKqB69P/u2oaj3ecID80Y0pEMnWpCzyHK4vEZBYsa+NEI46DDCtFSHS5f7+OKXeZcBTc+v1lqavtNpT5mEktCL08nFrOtM6oKeSWRGCO/uoUhQW9FYqRCg1qpBaGwwSQ8Q8mi/W5S61RgHkEBHPrYM9v79RpXRwALnuBm99qUCpGg3UxjXmVg4DF95iPYTJo175wL87Qr8CuJxNN5+vT0Wvqz2iMafOu/t7QW0CJ988bNm1tSCuiozT6175EOY/cMG36r+DBNOB+NMMjYjtn0zWvD4gMAsinmgMU2yE8Ychys/DWh35q7lQdNLo+gJgB40xn3p6KrgUn5/V2IiO0qCXwIKtIykT53RWQBQJCx1gzdrkQ4fDKJz1RspEOkIYzgUXAgXmpSJh3kHGwkN0RZb7+We/FNynjyMy/xUGnjmH8zJbPayX268j9xkfoIJu77kq7j3wydr/ZYnF+w4slHGYsQHigePmO5VPqaQQ5/QhOZ8QcWXuqtT7rKnvwjug8rJZQNiom6UX36jpMFGf59MYBh+hlcvyBhzLJaQQ92hB16PMIikUGPLyri/gIruA+CcLQm/qSA1MI7hp21AqzJfwKUsv/phPeGQ0K/SwlnNUfCWMkDb742z3gKY1mRq+r89/CQ61LVkNHmLhGV4vz+WEERbka5EhNVldraHI/fTBA+JpKxyOMMJD/TnCkJYQBnD9bJ2Mloq5aRAh9DM4PiiTlpB43IZBbagFCSLcaX+wOGkJSddvOimEgNR9lyBC0k3Fz3UlaQmJz21K+yWhtXqA4T5s2NdVn4nMeetRsPtoh8RlM2U7kfGkvrQeRAh9KXYuv5aQPIKmZWXdOwYDCYtMV5coaQnJFMmUr6w1cxghOArZ82w5RNNipiMkywUGBwP8tnrDCSNM65fWCclsz7BcQLr3Q/1/AgmTzi3qhBAH13c1pKNR9AyBhEnnhwrn8qgFqAS/uKKlhhLS4FoCfW8eT/ri3RNYkNIZEeYevOPanZ+LgdiwP2Freck4FDymmgAoRGV4Gw/EwgII+ehXInH3AiMppzN0Ps+ZuK0vy0e7/eMAUfKiBGdE2rUpVg0o4CP3YV8qK5AQWXL3xRuMru4/6XOiuMFQ7uwP6WvvJPkx5TsOeiKo2GEuWEiYjwB8SSVFLiijaShlXfLjBhc8O0Du12TM5V4KTVQCnF4QwqJl+YLnFSzC8P+1E+o8eNy8vAof8NdCJ9iuXiaNmXCCJAjMCLP6VWaQGOEgH6LPYPEEfq/4dK11eHIXS3PhPTOx89FodJm9z7SrlyIzk4GarxZmpP/hjJhvp33SCzzP26kfa7Y0Vvsv5YLQS23OxMZ7N8St/NMd1SkeSKKAB1WY5O1Vqkyhyo2gmVUuiDNl4vwUO0hDxeaemlsM98xhKbaaZAuGaN6Yf/IztA52okGU9Zim33CxXm13Q9MVFNGSrlDo+E56TdIeac1iS6dVN7Wo0a+KjCnFCwloJxG5n4E9C4aLDOMPUVQmqVp0LMs+Y4phgIbWJCyjbrYkktAWNqkkQGS3jch9ZS6eIajL0iCzn/MJXCTn4fRUj7lcjgQPKkMMtiKzoClqzcadys6EsOy/xmxLS4Luhnuhg8e3uGHDyYIsmeGZMPCErQlNwTK/jylMrAOABzXfnFwXw8rMZHbIDnDWmxvgUr6HSMjNMZFD+6UYYmXFvBqVPzUOyoIExav5JAM0JkpCptFA/oSOsmgDl0oiIsv4zeonybVmzMU5I7pZkHq4XOJV/+ffSZynAfED7OX8UjxiLviNct8m+KkdbuuiOdUVhnrjCwrgoiQuKkN8kWJw4nVS2JDlQpnX/sDS5ja2dLoqVHJWE5Vyt3pNlmRl+CUslSDTgPBd20bpEJ12OttWb8llpuSHsx6U90STiHg8KO8GhGII2JZuDm3A2sBI/5oqGskjPk/gbkrCN2GtyLr+Tlqv3Wkiq7boeSegIQ9ofKfCmF8OsycYvLuaJjAvzl1DDtBGSBEddkTIWdJWpQvbVIjH0umUV1t4laPkm6MF+a3ijkr5jobTzz2vvGorYWv169gp+AIGn+DoJBqktRMKx2eadFuEVC6ECEUpdZlQuOmtVZ7u/85QlEpp3LaaRvoaeL+HdOljxb8EwRq1FppMpYPN+WrUqFGjRo089B8MRa48WKaSugAAAABJRU5ErkJggg==">
+						</td>
+						
+						<td id="ayat">
+							<b><i>SOFTWARE SKILL</i></b>					
+						</td>
+					</tr>			
+				</table>
+				<table id="infosof">
+					<tr>
+						<td>
+							<b>Microsoft Word</b>			
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://www.luxurylotusspa.com/wp-content/uploads/2018/06/Luxury-Lotus-Spa-review-ratings-5-stars-transparent-background-5.png">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<b>Photoshop</b>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://3.bp.blogspot.com/-2QQIqwx0ejM/UvLf9e0kmsI/AAAAAAAAFW4/AqTM86tTTyY/s1600/4-star-rating.png">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<b>C++ Skill</b>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://www.luxurylotusspa.com/wp-content/uploads/2018/06/Luxury-Lotus-Spa-review-ratings-5-stars-transparent-background-5.png">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<b>HTML Skill</b>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://3.bp.blogspot.com/-2QQIqwx0ejM/UvLf9e0kmsI/AAAAAAAAFW4/AqTM86tTTyY/s1600/4-star-rating.png">
+						</td>
+					</tr>
+				
+				
+				</table>
+				<table id="tableicons">
+					<tr >
+						<td >
+						
+							<img id="icon" src="https://cdn0.iconfinder.com/data/icons/translation/512/translation-translate-language_2_copy_18-512.png">
+						</td>
+						
+						<td id="ayatt">
+							<b><i>LANGUAGES</b>					
+						</td>
+					</tr>			
+				</table>
+				
+				<table id="infosof">
+				
+					<tr>
+						<td>
+							<b>Malay</b>	
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://www.luxurylotusspa.com/wp-content/uploads/2018/06/Luxury-Lotus-Spa-review-ratings-5-stars-transparent-background-5.png">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<b>English</b>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://www.luxurylotusspa.com/wp-content/uploads/2018/06/Luxury-Lotus-Spa-review-ratings-5-stars-transparent-background-5.png">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<b>Arabic</b>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img id="bulat" src="http://3.bp.blogspot.com/-2QQIqwx0ejM/UvLf9e0kmsI/AAAAAAAAFW4/AqTM86tTTyY/s1600/4-star-rating.png">
+						</td>
+					</tr>
+				
+				
+				</table>
+				<table id="tableicons">
+					<tr>
+						<td>
+							<img id="icon" src="https://cdn0.iconfinder.com/data/icons/admin-panel-linear-black/2048/Referrals-512.png">
+						</td>
+						
+						<td id="ayattt">
+							<b><i>REFERENCES</b>					
+						</td>
+					</tr>					
+				</table>
+				
+				<p id="ayat1">
+				
+				<b>Norsyamsuddar binti Abd. Ghani</b><br>
+				013-9309426
+				</p>
+	
+			</div>
+	
+		</div>
+		<div class="part2">
+			<div id="">
+				<p id="nama">RIHAB ADIB BIN OTHMAN</p>
+				<p id="infodirisaya">Bachelor of Information & Technology.<br> 
+				International Islamic University Malaysia Student.<br>				
+				"We all make choices in life, but in the end our choices make us"</p>
+			</div>
+			
+			<div id="edudanachievement">
+				<table id="linepart2">
+					<tr id="rowsoft">
+						<td >
+							<img id="icon2" src="https://static.thenounproject.com/png/105312-200.png">
+						</td>
+						
+						<td id="apink">
+							<b><i>EDUCATION</b>					
+						</td>
+					</tr>				
+				</table>
+				
+				<table id="sejarahbelajar">
+				<tr>
+					<td>
+						<b>2004-2009
+						<br>SKSL
+						</b>
+						<br>UPSR							
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>
+						<b>2010-2014
+						<br>MRSM Alor Gajah
+						</b>
+						<br>PMR	
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>
+						<b>2015-2017
+						<br>CFS IIUM PJ
+						</b>
+						<br>FOUNDATION IN ENGINEERING & INFORMATION TECHNOLOGY
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>
+						<b>2017-NOW
+						<br>IIUM GOMBAK
+						</b>
+						<br>BACHELOR OF INFORMATION & COMMUNICATION TECHNOLOGY
+					</td>					
+				</tr>
+				</table>
+				
+				<table id="linepart2">
+					<tr id="rowsoft">
+						<td >
+							<img id="icon2" src="https://cdn2.iconfinder.com/data/icons/awards-4/512/certification_seal_time_good_award_awards_conqueror_triumph_win_winner_verified_best_pride_reward_success_achievement_ceremony_champion_competitive_trophy_tribute_emblem_favorite_medal_winning_popularity_favourites_glory_high-512.png">
+						</td>
+						
+						<td id="apink">
+							<b><i>ACHIEVEMENT</b>					
+						</td>
+					</tr>				
+				</table>
+				
+				<table id="pencapaian">
+				<tr>
+					<td>
+						<b>2004-2009
+						<br>UPSR
+						</b>
+						<br>5A	
+					</td>
+					<td>
+						<b>2010-2014
+						<br>PMR | SPM
+						</b>
+						<br>8A | 4A1B1C+
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>
+						<b>2004-209
+						<br>SKSL
+						</b>
+						<br>Prefect | Tokoh Sahsiah
+						<br>
+					</td>
+					<td>
+						<b>2010-2014
+						<br>MRSM Alor Gajah
+						</b>
+						<br>Head of Hall Organization
+						<br>
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>
+						<b>2015-2017
+						<br>CFS IIUM PJ
+						</b>
+						<br>Head of Gaming Bureau|Creative Multimedia Club
+					</td>					
+				</tr>
+				</table>
+
+				<table id="linepart2">
+					<tr>
+						<td>
+							<img id="icon2" src="https://www.thedrainco.com/wp-content/uploads/2017/12/wrench-icon-300x300.png">
+						</td>
+						
+						<td id="apinkk">
+							<b><i>WORK EXPERIENCE</b>					
+						</td>
+					</tr>				
+				</table>
+
+				<table id="sejarahbelajar">
+					<tr>
+						<td>
+							<b>RMS Adib Ent.					
+							</b>
+							<br>
+							Sales Assistant 						
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<b>Megah Banting					
+							</b>
+							<br>
+							Sales Assistant 	
+						</td>
+					</tr>
+				
+				</table>
+
+				
+			</div>
+			
+			<div id="personality">
+			
+				<table id="linepart2">
+					<tr>
+						<td>
+							<img id="icon2" src="https://static.thenounproject.com/png/237007-200.png">
+						</td>
+						
+						<td id="apinkkk">
+							<b><i>PERSONALITY</b>					
+						</td>
+					</tr>				
+				</table>
+				
+				<table id="sejarahbelajar">
+					<tr>
+						<td>
+							<b><li>Determined</b>
+						</td>
+						
+						<td>
+							<b><li>Imaginative</b>
+						</td>
+						
+						<td>
+							<b><li>Helpful</b>
+						</td>
+						
+						<td>
+							<b><li>Optimist</b>
+						</td>
+						
+						<td>
+							<b><li>Observant</b>
+						</td>
+						
+						<td>
+							<b><li>Trusting
+						</td>
+					</tr>
+				</table>
+	
+			</div>
+			
+			<div id="hobby">
+	
+				<table id="linepart2">
+					<tr>
+						<td>
+							<img id="icon2" src="http://www.inventicons.com//uploads/iconset/1211/wm/512/Animal-Hand-Art-ArtDesign-hobby-origami-paper-50.png">
+						</td>
+						
+						<td id="apinkkkk">
+							<b>HOBBIES</b>					
+						</td>
+					</tr>				
+				</table> </div>
+				
+				<table id="hobby" >
+				
+					<tr id="hobbby">
+						<td id="i1">
+							<img id="hobyicon" src="http://pluspng.com/img-png/ps4-png-ps4-png-300.png">
+						</td>
+						<td id="i2">
+							<img id="hobyicon" src="https://cdn0.iconfinder.com/data/icons/hipster/128/Hipster-21-512.png">
+						</td>
+						<td id="i3">
+							<img id="hobyicon" src="https://www.iosicongallery.com/icons/spotify-music-2015-07-30/512.png">
+						</td>
+					</tr> </table>
+					<table>
+					<tr id="hobbby">
+						<td id="hGaming">
+						<b>Gaming</b>
+						</td>
+						
+						<td id="hWriting">
+						<b>Writing</b>
+						</td>
+						
+						<td id="hMusic">
+						<b>Music</b>
+						</td>
+					</tr>
+					
+				</table>
+	
+			</div>
+	
+		</div>
+	
+	</div>
+	
 </body>
 </html>
