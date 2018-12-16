@@ -1,0 +1,169 @@
+.whole{
+	width:100%;
+	height:100%;
+}
+.part1{
+	width:35%;
+	float:left;
+	background-color:#02231C;
+	position:relative;	
+	
+}
+.part2{
+	width:65%;
+	float:right;
+	background-color:#4DD8AD;
+		
+}
+#acah{
+	
+	display:block;
+	width:50%;
+	height:50%;
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top:25px;
+	margin-bottom:25px;
+	border-radius:50%;
+	border:1.5px solid red;
+	/*opacity:0.75;*/
+}
+#GBA{
+	font-size:1.2vw;
+	margin-left:5%;
+	margin-right:5%;
+	border-spacing: 10px;
+	margin-bottom:25px;
+	color:white;
+	
+}
+#icon{
+	height:80px;
+	width:80px;	
+	border:2.5px solid black;
+	margin-left:-8px;
+	margin-bottom:-7.5px;
+	border-radius:10px;
+	filter:invert(100%);
+	
+	
+}
+#icon2{
+	height:80px;
+	width:80px;	
+	border:2.5px solid black;
+	margin-left:-9px;
+	margin-bottom:-9px;
+	border-radius:10px;
+	
+}
+#ayat
+{
+	color:white;
+	font-size:180%;
+	padding-right:145px;	
+}
+#ayatt
+{
+	color:white;
+	font-size:180%;
+	padding-right:210px;	
+}
+#ayattt
+{
+	color:white;
+	font-size:180%;
+	padding-right:195px;	
+}
+#bulat
+{
+	filter:invert(100%);
+	height:35%;
+	width:50%;
+}
+#infosof
+{
+	color:white;
+	margin-left:25px;
+	margin-bottom:25px;
+}
+#ayat1
+{
+	font-size:1.1vw;
+	margin-left:25px;
+	color:white;
+}
+#nama{
+	font-size:3vw;
+	text-align:center;
+	text-decoration: underline;
+}
+#infodirisaya{
+	font-size:1.5vw;
+	text-align:center;
+	margin-bottom:50px;
+}
+#sejarahbelajar, #pencapaian{
+	
+	font-size:1.1vw;
+	margin-left:25px;
+	margin-bottom:50px;
+	
+	border-spacing:10px;
+}
+#hobyicon{
+	margin-bottom:15px;
+	height:150px;
+	width:130px;
+	margin-left:25px;
+	margin-right:20px;
+	
+}
+#mutur{
+	margin-left:40px;
+}
+
+#hGaming{
+	padding-left:68px;
+	padding-right:30px;
+}
+#hWriting, #hMusic{
+	padding-left:81px;
+	padding-right:60px;
+}
+#tableicons{
+	margin-left:30px;
+	border-bottom:2.5px solid white;
+	border-collapse:collapse;
+}
+
+#linepart2{
+	margin-left:30px;
+	border-bottom:2.5px solid black;
+}
+#icongambar{
+	margin-right:100px;
+}
+#apink{
+	
+	padding-right:410px;
+	font-size:180%;
+}
+#apinkk{
+	
+	padding-right:300px;
+	font-size:180%;
+}
+#apinkkk{
+	
+	padding-right:380px;
+	font-size:180%;
+}
+#apinkkkk{
+	
+	padding-right:450px;
+	font-size:180%;
+}
+
+
+
